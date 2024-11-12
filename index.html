@@ -1,0 +1,468 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+  
+</head>
+<body>
+    <script>
+        AOS.init();
+      </script>
+  
+  <nav class="bg-white border-b drop-shadow-sm bg-opacity-90 fixed top-0 right-0 w-full z-30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <!-- Mobile menu button -->
+            <div class="flex items-center sm:hidden">
+                <button 
+                    type="button" 
+                    onclick="toggleMenu()"
+                    class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <svg 
+                        id="menu-open"
+                        class="h-6 w-6 text-black " 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke-width="1.5" 
+                        stroke="currentColor"
+                    >
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        />
+                    </svg>
+                    <svg 
+                        id="menu-close"
+                        class="hidden h-6 w-6 text-white" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke-width="1.5" 
+                        stroke="currentColor"
+                    >
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex-shrink-0 flex items-center">
+                <img 
+                    class="h-8 w-auto" 
+                    src="public/culturetrip.jpg"
+                    alt="Your Company"
+                >
+            </div>
+
+            <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                    <a 
+                        href="#" 
+                        class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                        aria-current="page"
+                    >
+                        Home
+                    </a>
+                    <a 
+                        href="#information" 
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-800 hover:text-white"
+                    >
+                        Sejarah
+                    </a>
+                    <a 
+                        href="#event" 
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-800 hover:text-white"
+                    >
+                        Event & Acara
+                    </a>
+                    <a 
+                        href="#galeri" 
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-800 hover:text-white"
+                    >
+                        Galeri
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <a 
+                    href="#footer" 
+                    class="p-2 text-black hover:text-gray-600"
+                >
+                    <svg 
+                        class="h-5 w-5" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke-width="1.5" 
+                        stroke="currentColor"
+                    >
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <a 
+                href="#" 
+                class="text-center block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                aria-current="page"
+            >
+                Home
+            </a>
+            <a 
+                href="#information" 
+                class="text-center block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-900 hover:text-white"
+            >
+                Sejarah
+            </a>
+            <a 
+                href="#event" 
+                class="text-center block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-900 hover:text-white"
+            >
+                Event & Acara
+            </a>
+            <a 
+                href="#galeri" 
+                class="text-center block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-900 hover:text-white"
+            >
+                Galeri
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <section id="hero ">
+        <div class="w-screen h-screen absolute -z-20">
+            <img class="w-full h-full object-cover md:hidden" src="public/fakhri.jpg" id="image1"
+            >
+            <img class="hidden w-full h-full object-cover md:block lg:hidden" src="public/page_202.png" id="image2"
+            >
+            <img class="hidden w-full h-full object-cover lg:block" src="public/culturetrip.jpg" id="image3"
+            >
+        </div>
+        
+        
+        <div class="w-screen absolute -bottom-5 z-20 max-md:bottom-40 " data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
+            <ul class="flex flex-wrap justify-center gap-2 text-white max-md:gap-1">
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Informasi Pembelian Tiket</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Informasi Sejarah</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Kontak</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Event</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Peta Lokasi</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Galeri Foto</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Blog dan Artikel</a></li>
+                <li  class="bg-slate-900 z-20 p-2 max-md:p-1"><a  href="" class="p-2 max-md:p-1">Testimoni Pengunjung</a></li>
+            </ul>
+            
+            
+        </div>
+
+        <div class="h-screen w-screen flex flex-col gap-y-4 items-center justify-center text-5xl font-bold px-14 max-md:px-2 overflow-hidden" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
+            <h1 class="text-outline text-center text-white drop-shadow-2xl  overflow-hidden">
+                Kisah Perjuangan dalam Setiap Sudut Museum Vredeburg
+            </h1>
+            
+            <form class="flex items-center w-2/4 mx-auto max-md:w-full">   
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  " placeholder="Search event or photo" />
+                </div>
+                <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
+            
+
+
+            <a href="#event" class=" p-2 rounded-md text-sm text-white/90 drop-shadow-lg bg-blue-500  text-outline">
+                Populer Di Benteng Vredeburg
+            </a>
+
+        </div>
+    </section>
+
+    <section id="information">
+        <div class="pt-16 w-screen h-auto px-14 max-md:px-2" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
+            <h1 class="text-3xl mb-2 text-center font-bold overflow-hidden"> Sejarah Singkat Benteng Vredeburg</h1>
+            <p class="text-justify">
+                Benteng Vredeburg adalah sebuah benteng yang dibangun oleh Belanda pada tahun 1760 di Yogyakarta, Indonesia. Awalnya, benteng ini dibangun untuk keperluan pertahanan dan sebagai pusat administratif kolonial Belanda. Selama penjajahan Belanda dan Jepang, benteng ini berfungsi sebagai markas militer dan tempat penahanan tahanan politik. Setelah Indonesia merdeka, benteng ini digunakan dalam berbagai peran hingga akhirnya diubah menjadi museum pada tahun 1992. Saat ini, Benteng Vredeburg menjadi situs sejarah yang menyimpan berbagai koleksi perjuangan kemerdekaan Indonesia dan menjadi destinasi wisata edukatif di Yogyakarta.
+            </p>
+        </div>
+    </section>
+    
+    <section id="event">
+        <div class="pt-20 px-14 max-md:px-2  overflow-hidden" >
+            <h1 class="text-3xl mb-2 text-center font-bold overflow-hidden">Event Dan Acara</h1>
+            <div class="w-full drop-shadow-md h-auto p-1">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-2 max-md:flex max-md:flex-col max-md:items-center " data-aos="flip-up">
+                    <div class="max-w-sm max-md:w-full  overflow-hidden shadow-lg relative group hover:bg-gray-800">
+                        <div class="relative h-52">
+                            <img src="public/culturetrip.jpg" alt="Card background" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h2 class="text-xl font-bold text-white">Beautiful Landscape</h2>
+                            <div class="flex gap-1 text-white">
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Sejarah</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Vintage</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Education</a>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-center px-6 py-4">Discover breathtaking views of nature's finest landscapes. This serene location offers peace and tranquility away from the bustling city life.</p>
+                        </div>
+                    </div>
+                    <div class="max-w-sm max-md:w-full overflow-hidden shadow-lg relative group hover:bg-gray-800">
+                        <div class="relative h-52">
+                            <img src="public/culturetrip.jpg" alt="Card background" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h2 class="text-xl font-bold text-white">Beautiful Landscape</h2>
+                            <div class="flex gap-1 text-white">
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Sejarah</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Vintage</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Education</a>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-center px-6 py-4">Discover breathtaking views of nature's finest landscapes. This serene location offers peace and tranquility away from the bustling city life.</p>
+                        </div>
+                    </div>
+                    <div class="max-w-sm max-md:w-full overflow-hidden shadow-lg relative group hover:bg-gray-800">
+                        <div class="relative h-52">
+                            <img src="public/culturetrip.jpg" alt="Card background" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h2 class="text-xl font-bold text-white">Beautiful Landscape</h2>
+                            <div class="flex gap-1 text-white">
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Sejarah</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Vintage</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Education</a>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-center px-6 py-4">Discover breathtaking views of nature's finest landscapes. This serene location offers peace and tranquility away from the bustling city life.</p>
+                        </div>
+                    </div>
+                    <div class="max-w-sm max-md:w-full overflow-hidden shadow-lg relative group hover:bg-gray-800">
+                        <div class="relative h-52">
+                            <img src="public/culturetrip.jpg" alt="Card background" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h2 class="text-xl font-bold text-white">Beautiful Landscape</h2>
+                            <div class="flex gap-1 text-white">
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Sejarah</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Vintage</a>
+                                <a href="" class="text-xs z-20 p-1 bg-slate-800">Education</a>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white text-center px-6 py-4">Discover breathtaking views of nature's finest landscapes. This serene location offers peace and tranquility away from the bustling city life.</p>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri">
+        
+        <div class="w-screen  pb-10 px-14 max-md:px-2 flex flex-col items-center ">
+        <h1 class=" text-3xl mt-20 mb-2  text-center font-bold overflow-hidden"> Galeri</h1>
+        
+            <div class="flex flex-wrap -m-1 md:-m-2 p-3  rounded "  data-aos="zoom-in">
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/culturetrip.jpg">
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/fakhri.jpg">
+                    </div>
+                    <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/page_202.png">
+                    </div>
+              </div>
+                <div class="flex flex-wrap w-1/3">
+                    <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/culturetrip.jpg">
+                    </div>
+                  
+              </div>
+              <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                  <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/fakhri.jpg">
+                </div>
+                <div class="w-1/2 p-1 md:p-2">
+                  <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/page_202.png">
+                </div>
+                <div class="w-1/2 p-1 md:p-2">
+                  <img alt="gallery" class="grayscale hover:grayscale-0 transition-all block object-cover object-center w-full h-full rounded-lg" src="public/culturetrip.jpg">
+                </div>
+              </div>
+            </div>
+    </section>
+
+    <section id="accordion">
+
+    </section>
+
+    <section id="footer">
+        <div class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4 max-md:text-center">Visit Us</h2>
+                        <div class="space-y-2 mb-2 max-md:text-center">
+                            <p class="text-gray-300">Museum Benteng Vredeburg Yogyakarta</p>
+                            <p class="text-gray-300">Jl. Margo Mulyo No.6, Ngupasan,</p>
+                            <p class="text-gray-300">Kec. Gondomanan, Kota Yogyakarta,</p>
+                            <p class="text-gray-300">Daerah Istimewa Yogyakarta 55122</p>
+                            <p class="text-gray-300 mt-4">WhatsApp: 0811-813-2121</p>
+                            <p class="text-gray-300">Email: info@vredeburgmuseum.com</p>
+                        </div>
+                        
+                          <iframe class="w-80 max-md:w-full" height="180" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=museum%20vre&zoom=15&maptype=roadmap"></iframe>
+
+                    </div>
+        
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4 max-md:text-center">Menu</h2>
+                        <ul class="space-y-2 text-gray-300 max-md:text-center">
+                            <li><a href="" class="hover:text-blue-400">Home</a></li>
+                            <li><a href="#information" class="hover:text-blue-400">Information</a></li>
+                            <li><a href="#event" class="hover:text-blue-400">Event</a></li>
+                            <li><a href="#galeri" class="hover:text-blue-400">Galeri</a></li>
+                            <li><a href="#footer" class="hover:text-blue-400">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4 max-md:text-center">Stay Connected</h2>
+                        <div class="flex space-x-4 mb-4 max-md:justify-evenly">
+                            <a href="#" class=" p-2 rounded-full hover:text-white/45 text-white transition-colors">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </a>
+                        
+                            <a href="#" class=" p-2 rounded-full hover:text-white/45 text-white transition-colors">
+                                <i class="fa-brands fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class=" p-2 rounded-full hover:text-white/45 text-white transition-colors">
+                                <i class="fa-brands fa-twitter text-xl"></i>
+                            </a>
+                        
+                            <a href="#" class=" p-2 rounded-full hover:text-white/45 text-white transition-colors">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                            </a>
+                        
+                            <a href="#" class=" p-2 rounded-full hover:text-white/45 text-white transition-colors">
+                                <i class="fa-brands fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                        
+        
+                        <form class="flex flex-col space-y-2">
+                            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-md bg-gray-800 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+        
+                <div class="mt-12 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500">© 2024 Your Company Name. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                        <a href="#footer" class="text-gray-500 hover:text-white">Privacy Policy</a>
+                        <a href="#footer" class="text-gray-500 hover:text-white">Terms of Service</a>
+                        <a href="#footer" class="text-gray-500 hover:text-white">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        
+            <a href="https://wa.me/628118132121" class="fixed bottom-5 right-5 z-30 bg-green-500 text-white p-4 flex justify-center items-center rounded-full shadow-lg hover:bg-green-600 transition-colors">
+                <i class="fa-brands fa-whatsapp fa-2x"></i>
+            </a>
+        </div>
+        
+    </section>
+
+    <script>
+        const images = [
+            document.getElementById('image1'),
+            document.getElementById('image2'),
+            document.getElementById('image3')
+        ];
+    
+        let currentIndex = 0;
+    
+        function changeImage() {
+            images[currentIndex].style.display = 'none';
+    
+            currentIndex = (currentIndex + 1) % images.length;
+    
+            images[currentIndex].style.display = 'block';
+        }
+    
+        setInterval(changeImage, 5000);
+
+
+        function toggleMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+        
+        const isMenuOpen = mobileMenu.classList.contains('hidden');
+        
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            menuOpen.classList.add('hidden');
+            menuClose.classList.remove('hidden');
+        } else {
+            mobileMenu.classList.add('hidden');
+            menuOpen.classList.remove('hidden');
+            menuClose.classList.add('hidden');
+        }
+    }
+    </script>
+    
+</body>
+</html>

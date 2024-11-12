@@ -1,0 +1,22 @@
+.nav-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
+
+*{
+    overflow-x: hidden;
+    font-family: 'Lexend', sans-serif;
+    scroll-behavior: initial;       
+}
+
+.text-outline {
+    color: white; /* warna teks utama */
+   text-shadow: 2px -2px 13px rgba(0,0,0,0.83);
+}
